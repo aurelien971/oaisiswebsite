@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: "Oasis - Voice Transcription",
@@ -54,6 +56,8 @@ export default function RootLayout({
         <main className="pt-20">
           {children}
         </main>
+<Analytics />
+<SpeedInsights />
       </body>
     </html>
   );
