@@ -38,7 +38,7 @@ export default function RootLayout({
                 Terms
               </a>
               <a 
-                href="https://example.com/oasis.dmg" 
+href="https://github.com/aurelien971/oaisiswebsite/releases/download/v.1.0.0/Oasis-1.0.0.dmg"
                 className="bg-white text-black px-4 md:px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition flex items-center gap-1 md:gap-2 text-sm md:text-base whitespace-nowrap flex-shrink-0"
                 style={{ fontFamily: 'SF Pro Display, -apple-system, sans-serif' }}
                 download

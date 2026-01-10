@@ -17,6 +17,8 @@ export default function Pricing() {
     }
   };
 
+  const downloadUrl = "https://github.com/aurelien971/oaisiswebsite/releases/download/v.1.0.0/Oasis-1.0.0.dmg";
+
   return (
     <div className="min-h-screen bg-black py-16 relative overflow-hidden">
       {/* Recessed Blue Ambient Glow */}
@@ -87,9 +89,12 @@ export default function Pricing() {
               </li>
             </ul>
             <div className="mt-auto">
-              <button className="block w-full bg-white/5 text-white text-sm text-center py-3 rounded-full font-medium border border-white/10 hover:bg-white/10 transition-all">
+              <a 
+                href={downloadUrl}
+                className="block w-full bg-white/5 text-white text-sm text-center py-3 rounded-full font-medium border border-white/10 hover:bg-white/10 transition-all"
+              >
                 Download Free
-              </button>
+              </a>
             </div>
           </div>
 
@@ -124,9 +129,12 @@ export default function Pricing() {
               </li>
             </ul>
             <div className="mt-auto">
-              <button className="block w-full bg-blue-600 text-white text-sm text-center py-3 rounded-full font-medium shadow-[0_4px_20px_rgba(59,130,246,0.2)] hover:bg-blue-500 transition-all">
+              <a 
+                href={downloadUrl}
+                className="block w-full bg-blue-600 text-white text-sm text-center py-3 rounded-full font-medium shadow-[0_4px_20px_rgba(59,130,246,0.2)] hover:bg-blue-500 transition-all"
+              >
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
 
@@ -156,9 +164,12 @@ export default function Pricing() {
               </li>
             </ul>
             <div className="mt-auto">
-              <button className="block w-full bg-white text-black text-sm text-center py-3 rounded-full font-medium hover:bg-gray-200 transition-all">
+              <a 
+                href={downloadUrl}
+                className="block w-full bg-white text-black text-sm text-center py-3 rounded-full font-medium hover:bg-gray-200 transition-all"
+              >
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
 

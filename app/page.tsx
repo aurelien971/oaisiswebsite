@@ -39,7 +39,7 @@ export default function Home() {
               </p>
               
               <a 
-                href="#download" 
+href="https://github.com/aurelien971/oaisiswebsite/releases/download/v.1.0.0/Oasis-1.0.0.dmg"
                 className="inline-flex items-center gap-2 bg-white text-black px-6 md:px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition order-3 md:order-2"
                 style={{ fontFamily: 'SF Pro Display, -apple-system, sans-serif' }}
               >
