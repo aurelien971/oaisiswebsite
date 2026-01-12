@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>Oasis Updates</title>
+        <description>Software updates for Oasis</description>
+        <language>en</language>
+        <item>
+            <title>Version 1.0.2</title>
+            <sparkle:version>1.0.2</sparkle:version>
+            <description>Current stable version</description>
+            <pubDate>Mon, 13 Jan 2025 12:00:00 +0000</pubDate>
+            <enclosure 
+                url="https://oaisis.co.uk/downloads/Oasis-1.0.2.zip" 
+                sparkle:version="1.0.2"
+                length="1"
+                type="application/octet-stream"
+            />
+        </item>
+    </channel>
+</rss>
