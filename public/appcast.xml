@@ -5,14 +5,16 @@
         <description>Software updates for Oasis</description>
         <language>en</language>
         <item>
-            <title>Version 1.0.2</title>
-            <sparkle:version>1.0.2</sparkle:version>
-            <description>Current stable version</description>
-            <pubDate>Mon, 13 Jan 2025 12:00:00 +0000</pubDate>
+            <title>Version 1.0.3</title>
+            <sparkle:version>1.0.3</sparkle:version>
+            <sparkle:releaseNotesLink>https://oaisis.co.uk/release-notes.html</sparkle:releaseNotesLink>
+            <description>Double-tap lock mode, Sparkle auto-updates, settings enhancements</description>
+            <pubDate>Mon, 13 Jan 2025 18:00:00 +0000</pubDate>
             <enclosure 
-                url="https://oaisis.co.uk/downloads/Oasis-1.0.2.zip" 
-                sparkle:version="1.0.2"
-                length="1"
+                url="https://github.com/aurelien971/oaisiswebsite/releases/download/v1.0.3/Oasis-1.0.3.zip" 
+                sparkle:version="1.0.3"
+                sparkle:edSignature="ZeJlZKjs6AJuq2fbK4iDmpCo4D1KqATGfxuFWQ/XskUZPJH2YThHGLFYd+DxRlizCyrIAlXuk5hHtiI5OrR/AQ=="
+                length="19232851"
                 type="application/octet-stream"
             />
         </item>
