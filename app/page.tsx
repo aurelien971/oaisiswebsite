@@ -2,7 +2,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black">
       <div className="min-h-screen flex items-center relative overflow-hidden py-20 md:py-0">
-        {/* Animated Gradient Glow */}
         <div 
           className="absolute left-0 top-1/5 md:top-1/2 w-96 h-96 blur-3xl pointer-events-none animate-glow"
           style={{
@@ -15,7 +14,6 @@ export default function Home() {
         <div className="max-w-8xl mx-auto px-6 md:px-20 w-full relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             
-            {/* Left: Text - Centered on mobile, Left-aligned on desktop */}
             <div className="flex flex-col items-center text-center md:items-start md:text-left order-1">
               <h1 
                 className="text-3xl md:text-4xl font-normal text-white mb-4 md:mb-5 leading-tight"
@@ -39,7 +37,7 @@ export default function Home() {
               </p>
               
               <a 
-href="https://github.com/aurelien971/oaisiswebsite/releases/download/v.1.0.0/Oasis-1.0.0.dmg"
+                href="/api/download"
                 className="inline-flex items-center gap-2 bg-white text-black px-6 md:px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition order-3 md:order-2"
                 style={{ fontFamily: 'SF Pro Display, -apple-system, sans-serif' }}
               >
@@ -50,7 +48,6 @@ href="https://github.com/aurelien971/oaisiswebsite/releases/download/v.1.0.0/Oas
               </a>
             </div>
 
-            {/* Right: Video - Pushed right on desktop */}
             <div className="flex items-center justify-center md:justify-end order-2 md:order-3">
               <div className="rounded-3xl overflow-hidden shadow-2xl w-full max-w-md md:max-w-none">
                 <video 
