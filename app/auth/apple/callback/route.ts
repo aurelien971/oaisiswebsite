@@ -1,70 +1,75 @@
 import { NextResponse } from "next/server";
 
-function html(body: string) {
-  return new NextResponse(
-    `<!doctype html><html><head><meta charset="utf-8"><title>Apple Callback</title></head><body style="font-family: ui-sans-serif, system-ui; padding: 24px;">
-      <h2>Apple callback received</h2>
-      ${body}
-    </body></html>`,
-    { headers: { "content-type": "text/html; charset=utf-8" } }
-  );
-}
-
-export async function POST(req: Request) {
-  try {
-    const form = await req.formData();
-    const code = String(form.get("code") ?? "");
-    const state = String(form.get("state") ?? "");
-    const idToken = String(form.get("id_token") ?? "");
-    const user = String(form.get("user") ?? "");
-    const error = String(form.get("error") ?? "");
-    const errorDescription = String(form.get("error_description") ?? "");
-
-    console.log("[APPLE CALLBACK] POST", {
-      hasCode: !!code,
-      hasIdToken: !!idToken,
-      state,
-      error,
-      errorDescription,
-      userLen: user.length,
-    });
-
-    return html(`
-      <pre style="background:#f6f6f6; padding:12px; border-radius:8px; overflow:auto;">${escapeHtml(
-        JSON.stringify(
-          {
-            code: code ? code.slice(0, 12) + "..." : "",
-            state,
-            id_token: idToken ? idToken.slice(0, 24) + "..." : "",
-            user: user ? user.slice(0, 120) + (user.length > 120 ? "..." : "") : "",
-            error,
-            error_description: errorDescription,
-          },
-          null,
-          2
-        )
-      )}</pre>
-      <p>If you see <b>code</b> here, the web callback is working.</p>
-    `);
-  } catch (e: any) {
-    console.error("[APPLE CALLBACK] POST error", e);
-    return html(`<p style="color:#b00020;">POST error: ${escapeHtml(String(e?.message ?? e))}</p>`);
-  }
-}
-
-// Optional: helpful if you ever switch to response_mode=query for debugging
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const code = url.searchParams.get("code") ?? "";
   const state = url.searchParams.get("state") ?? "";
   const error = url.searchParams.get("error") ?? "";
-  console.log("[APPLE CALLBACK] GET", { hasCode: !!code, state, error });
 
-  return html(`
-    <pre style="background:#f6f6f6; padding:12px; border-radius:8px; overflow:auto;">${escapeHtml(
-      JSON.stringify({ code: code ? code.slice(0, 12) + "..." : "", state, error }, null, 2)
-    )}</pre>
-  `);
+  console.log("[APPLE CALLBACK] GET", {
+    hasCode: !!code,
+    state,
+    error,
+  });
+
+  return NextResponse.json({ method: "GET", code, state, error });
+}
+
+export async function POST(req: Request) {
+  const contentType = req.headers.get("content-type") ?? "";
+  let code = "";
+  let state = "";
+  let error = "";
+  let id_token = "";
+  let user = "";
+
+  // Apple sends application/x-www-form-urlencoded when using response_mode=form_post
+  if (contentType.includes("application/x-www-form-urlencoded")) {
+    const bodyText = await req.text();
+    const params = new URLSearchParams(bodyText);
+
+    code = params.get("code") ?? "";
+    state = params.get("state") ?? "";
+    error = params.get("error") ?? "";
+    id_token = params.get("id_token") ?? "";
+    user = params.get("user") ?? "";
+  } else if (contentType.includes("application/json")) {
+    // just in case you hit it manually with JSON
+    const body = await req.json().catch(() => ({}));
+    code = body.code ?? "";
+    state = body.state ?? "";
+    error = body.error ?? "";
+    id_token = body.id_token ?? "";
+    user = body.user ?? "";
+  } else {
+    const bodyText = await req.text().catch(() => "");
+    console.log("[APPLE CALLBACK] POST unknown content-type", contentType, bodyText);
+  }
+
+  console.log("[APPLE CALLBACK] POST", {
+    hasCode: !!code,
+    hasIdToken: !!id_token,
+    state,
+    error,
+    userPreview: user ? user.slice(0, 80) : "",
+  });
+
+  // For now, just show something in the browser so you know it worked.
+  // Later we will exchange `code` for tokens server-side and redirect back into the app.
+  const html = `<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Apple Callback</title></head>
+  <body style="font-family: -apple-system, system-ui; padding: 24px;">
+    <h2>Apple callback received (POST)</h2>
+    <pre>${escapeHtml(JSON.stringify({ code, state, error, hasIdToken: !!id_token }, null, 2))}</pre>
+    <p>You can close this window.</p>
+  </body>
+</html>`;
+
+  return new NextResponse(html, {
+    status: 200,
+    headers: { "content-type": "text/html; charset=utf-8" },
+  });
 }
 
 function escapeHtml(s: string) {
