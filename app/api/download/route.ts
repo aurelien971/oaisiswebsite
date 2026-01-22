@@ -16,5 +16,5 @@ export async function GET() {
     console.error('Failed to fetch appcast:', error);
   }
   
-  return NextResponse.redirect('https://github.com/aurelien971/oaisiswebsite/releases/download/v1.0.4/Oasis.dmg');
+  return NextResponse.redirect('https://github.com/aurelien971/oaisiswebsite/releases/download/v1.04/Oasis.dmg');
 }
