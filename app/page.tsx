@@ -11,19 +11,20 @@ export default function Home() {
           }}
         />
 
-        <div className="max-w-8xl mx-auto px-6 md:px-20 w-full relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+<div className="max-w-8xl mx-auto px-6 md:px-20 w-full relative z-10">
+          {/* CHANGED: give video column more space on md+ */}
+          <div className="grid grid-cols-1 md:grid-cols-[0.85fr_1.15fr] gap-12 md:gap-20 items-center">
             
             <div className="flex flex-col items-center text-center md:items-start md:text-left order-1">
               <h1 
-                className="text-3xl md:text-4xl font-normal text-white mb-4 md:mb-5 leading-tight"
+                className="text-3xl md:text-4xl font-normal text-white mb-4 md:mb-5 leading-tight md:max-w-md"
                 style={{ fontFamily: 'SF Pro Display, -apple-system, sans-serif' }}
               >
                 Speaking is 387% faster than typing.
               </h1>
               
               <p 
-                className="text-lg md:text-xl mb-6 md:mb-8 leading-relaxed"
+                className="text-lg md:text-xl mb-6 md:mb-8 leading-relaxed md:max-w-md"
                 style={{ 
                   fontFamily: 'SF Pro Display, -apple-system, sans-serif',
                   fontWeight: 300,
@@ -49,17 +50,17 @@ export default function Home() {
             </div>
 
             <div className="flex items-center justify-center md:justify-end order-2 md:order-3">
-              <div className="rounded-3xl overflow-hidden shadow-2xl w-full max-w-md md:max-w-none">
-                <video 
-                  autoPlay 
-                  loop 
-                  muted  
-                  playsInline
-                  className="w-full h-auto"
-                >
-                  <source src="/demo-animation.mp4" type="video/mp4" />
-                </video>
-              </div>
+            <div className="rounded-xl overflow-hidden w-[215%] md:w-[125%] lg:w-[240%] md:max-w-none md:ml-auto">
+  <video 
+    autoPlay 
+    loop 
+    muted  
+    playsInline
+    className="w-full h-auto"
+  >
+    <source src="/demo-animation6.mp4" type="video/mp4" />
+  </video>
+</div>
             </div>
 
           </div>
