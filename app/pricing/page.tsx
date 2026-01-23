@@ -222,7 +222,7 @@ export default function Pricing() {
                 href={ctaHref('basic')}
                 className="block w-full bg-blue-600 text-white text-sm text-center py-3 rounded-full font-medium hover:bg-blue-500 transition-all"
               >
-                Get Started
+                Upgrade In-APP
               </a>
             </div>
           </div>
@@ -256,7 +256,7 @@ export default function Pricing() {
                 href={ctaHref('pro')}
                 className="block w-full bg-white text-black text-sm text-center py-3 rounded-full font-medium hover:bg-gray-200 transition-all"
               >
-                Get Started
+                Upgrade In-APP
               </a>
             </div>
           </div>
