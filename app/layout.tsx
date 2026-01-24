@@ -6,13 +6,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://oaisis.co.uk"),
+  metadataBase: new URL("https://www.oaisis.co.uk"),
   title: "Oasis - Voice Transcription",
   description: "Transcribe your voice instantly",
   openGraph: {
     title: "Oasis - Voice Transcription",
     description: "Transcribe your voice instantly",
-    url: "https://oaisis.co.uk",
+    url: "https://www.oaisis.co.uk",
     siteName: "Oasis",
     images: [
       {
