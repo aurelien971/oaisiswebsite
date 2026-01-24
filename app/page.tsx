@@ -17,7 +17,7 @@ export default function Home() {
           <div className="flex flex-col items-center text-center mb-8 md:mb-10">
             {/* APP ICON */}
             <img
-              src="/appicon.png"
+              src="/appIcon1.png"
               alt="Oasis app icon"
               className="mb-6 w-14 h-14 md:w-26 md:h-26 "
               draggable={false}
