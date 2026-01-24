@@ -109,7 +109,7 @@ export default function Pricing() {
     />
 
     <div className="max-w-6xl mx-auto px-6 relative z-10">
-      <div className="text-center mb-6">
+      <div className="text-center mb-8">
         <h1
           className="text-4xl md:text-5xl font-medium text-white mb-3 tracking-tight"
           style={{ fontFamily: 'SF Pro Display, sans-serif' }}
@@ -117,7 +117,7 @@ export default function Pricing() {
           Simple Pricing
         </h1>
 
-        <div className="flex flex-col items-center gap-3 mt-5">
+        <div className="flex flex-col items-center gap-4 mt-6">
           <div className="bg-white/5 p-1.5 rounded-full border border-white/10 flex items-center relative">
             <button
               onClick={() => setIsYearly(false)}
@@ -144,7 +144,7 @@ export default function Pricing() {
           </div>
 
           {isYearly && (
-            <span className="text-blue-400 text-xs font-medium uppercase tracking-wider">
+            <span className="text-blue-400 text-sm font-medium uppercase tracking-wider mt-1">
               Save {savingsPct}% with yearly billing
             </span>
           )}
