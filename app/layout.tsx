@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.oaisis.co.uk/og1.png",
+        url: "https://www.oaisis.co.uk/og2.png",
         width: 1200,
         height: 630,
         alt: "Oasis",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Oasis - Voice Transcription",
     description: "Transcribe your voice instantly",
-    images: ["https://www.oaisis.co.uk/og1.png"],
+    images: ["https://www.oaisis.co.uk/og2.png"],
   },
   icons: {
     icon: [
