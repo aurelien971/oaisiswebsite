@@ -10,14 +10,12 @@ export const metadata: Metadata = {
   description: "Transcribe your voice instantly",
   icons: {
     icon: [
-      {
-        url: "/favicon-light.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/favicon-dark.png",
-        media: "(prefers-color-scheme: dark)",
-      },
+      // fallback for browsers that ignore media
+      { url: "/favicon.ico" },
+
+      // light/dark variants
+      { url: "/favicon-light.png", media: "(prefers-color-scheme: light)" },
+      { url: "/favicon-dark.png", media: "(prefers-color-scheme: dark)" },
     ],
   },
 };

@@ -4,7 +4,7 @@ export default function Navbar() {
       <div className="max-w-8xl mx-auto px-6 md:px-20 py-4 flex justify-between items-center min-w-max">
         <div className="flex items-center gap-3 flex-shrink-0">
           <a href="/" className="flex items-center">
-            <img src="/wordmark.png" alt="Oasis" className="h-3 md:h-5 w-auto" />
+            <img src="/wordmark1.png" alt="Oasis" className="h-3 md:h-5 w-auto" />
           </a>
         </div>
 
