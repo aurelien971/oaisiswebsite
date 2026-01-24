@@ -19,7 +19,7 @@ export default function Home() {
             <img
               src="/appIcon1.png"
               alt="Oasis app icon"
-              className="mb-6 w-14 h-14 md:w-26 md:h-26 "
+              className="mb-6 w-22 h-22 md:w-26 md:h-26 "
               draggable={false}
             />
 
