@@ -9,26 +9,30 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.oaisis.co.uk"),
   title: "Oasis - Voice Transcription",
   description: "Transcribe your voice instantly",
+  alternates: {
+    canonical: "https://www.oaisis.co.uk/",
+  },
   openGraph: {
     title: "Oasis - Voice Transcription",
     description: "Transcribe your voice instantly",
-    url: "https://www.oaisis.co.uk",
+    url: "https://www.oaisis.co.uk/",
     siteName: "Oasis",
+    type: "website",
     images: [
       {
-        url: "/og.png",
+        url: "https://www.oaisis.co.uk/og1.png",
         width: 1200,
         height: 630,
         alt: "Oasis",
+        type: "image/png",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Oasis - Voice Transcription",
     description: "Transcribe your voice instantly",
-    images: ["/og.png"],
+    images: ["https://www.oaisis.co.uk/og1.png"],
   },
   icons: {
     icon: [
