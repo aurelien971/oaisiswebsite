@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black">
       {/* reduce vertical padding overall */}
-      <div className="min-h-screen relative overflow-hidden pt-10 pb-12 md:pt-12 md:pb-16">
+      <div className="min-h-screen relative overflow-hidden pt-6 pb-12 md:pt-0 md:pb-16">
         
         {/* Glow */}
         <div
@@ -52,7 +52,7 @@ export default function Home() {
         {/* pull the video up slightly */}
         <div className="max-w-8xl mx-auto px-6 md:px-100 -mt-2 md:-mt-4">
           <video autoPlay loop muted playsInline className="w-full h-auto">
-            <source src="/demoanimation3.mp4" type="video/mp4" />
+            <source src="/demoanimation4.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
