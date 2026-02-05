@@ -105,7 +105,7 @@ export default function PrivacyPage() {
         </h2>
         <p>
           If you have any questions about this Privacy Policy, you may contact us at{" "}
-          <strong>[your support email]</strong>.
+          <strong>[fefeapphello@gmail.com]</strong>.
         </p>
       </div>
     </main>
