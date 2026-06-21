@@ -276,19 +276,15 @@ export default function FaikeTermsPage() {
             </p>
             <address className="mt-4 not-italic">
               <strong>New Age Technologies Ltd.</strong>
-              <br />
-              40 Ossington Street
-              <br />
-              London W2 4LY
-              <br />
+  
               United Kingdom
               <br />
               Email:{" "}
               <a
-                href="mailto:legal@newagetechnologies.co.uk"
+                href="mailto:fefeapphello@gmail.com"
                 className="font-medium text-blue-600 underline"
               >
-                legal@newagetechnologies.co.uk
+                fefeapphello@gmail.com
               </a>
             </address>
           </section>

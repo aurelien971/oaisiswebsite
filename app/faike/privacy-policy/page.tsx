@@ -227,19 +227,15 @@ export default function FaikePrivacyPolicyPage() {
             </p>
             <address className="mt-4 not-italic">
               <strong>New Age Technologies Ltd.</strong>
-              <br />
-              40 Ossington Street
-              <br />
-              London W2 4LY
-              <br />
+         
               United Kingdom
               <br />
               Email:{" "}
               <a
-                href="mailto:privacy@newagetechnologies.co.uk"
+                href="mailto:fefeapphello@gmail.com"
                 className="font-medium text-blue-600 underline"
               >
-                privacy@newagetechnologies.co.uk
+                fefeapphello@gmail.com
               </a>
             </address>
           </section>
